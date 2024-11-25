@@ -1,8 +1,6 @@
-Here’s a `README.md` for your project based on the details you provided:
+# RadzAdblocker Android WebView Blocker
 
----
-
-# RadzWeb Android WebView Blocker
+[![](https://jitpack.io/v/Radzdevteam/RadzAdblocker.svg)](https://jitpack.io/#Radzdevteam/RadzAdblocker)
 
 RadzWeb is an Android app that uses a customized WebView to load websites with enhanced functionality. It features video playback, ad blocking, URL redirection prevention, and more.
 
@@ -42,7 +40,7 @@ In your app module’s `build.gradle` file, add the following dependency under `
 
 ```groovy
 dependencies {
-    implementation ("com.github.Radzdevteam:radzweb:Tag")
+    implementation ("com.github.Radzdevteam:RadzAdblocker:Tag")
 }
 ```
 
@@ -57,20 +55,12 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val intent = Intent(this, radzweb::class.java)
+        val intent = Intent(this, radzadblocker::class.java)
         intent.putExtra("url", "https://google.com/")
         startActivity(intent)
         finish()
     }
 }
-```
-
-### 4. Permissions
-Ensure that the app has the necessary permissions in the `AndroidManifest.xml`:
-
-```xml
-<uses-permission android:name="android.permission.INTERNET"/>
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 ```
 
 ## Usage
@@ -84,13 +74,5 @@ Once the app is set up and running, it will:
 
 ## Customization
 
-- **URL Customization**: You can pass any URL to the `radzweb` activity by changing the value passed in the `Intent`.
+- **URL Customization**: You can pass any URL to the `radzadblocker` activity by changing the value passed in the `Intent`.
 - **Ad Block List**: The list of ad hosts is dynamically fetched from a remote URL. You can customize this list by modifying the source of the ad host file.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-This README provides an overview of your project, including setup, usage, and customization options. Would you like any additional information or changes to this document?
